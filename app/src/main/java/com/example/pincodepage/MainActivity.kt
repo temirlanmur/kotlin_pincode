@@ -7,23 +7,32 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 
 class MainActivity : ComponentActivity() {
+    private val PIN_KEY = "PIN_KEY"
+    private val PIN_COLOR_KEY = "PIN_COLOR_KEY"
+
     private val numberButtons = mutableListOf<Button>()
     private lateinit var btnDelete: Button
     private lateinit var btnOk: Button
-
     private lateinit var pinCodeTextView: TextView
 
     private var pinCodeStringBuilder: StringBuilder = java.lang.StringBuilder(4)
+    private var pinColor: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initViews()
-
-        updatePinCodeText()
-
         setClickListeners()
+        resetPinColor()
+        restoreFromSavedInstanceState(savedInstanceState)
+        showPinCodeText()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(PIN_KEY, pinCodeStringBuilder.toString())
+        outState.putInt(PIN_COLOR_KEY, pinColor)
     }
 
     private fun initViews() {
@@ -39,12 +48,13 @@ class MainActivity : ComponentActivity() {
         pinCodeTextView = findViewById(R.id.pin_code)
     }
 
-    private fun updatePinCodeText() {
+    private fun showPinCodeText() {
         if (pinCodeStringBuilder.isEmpty()) {
             pinCodeTextView.text = resources.getString(R.string.hint_text)
             return
         }
         pinCodeTextView.text = pinCodeStringBuilder.toString()
+        pinCodeTextView.setTextColor(pinColor)
     }
 
     private fun setClickListeners() {
@@ -54,22 +64,43 @@ class MainActivity : ComponentActivity() {
                     return@setOnClickListener
                 }
                 pinCodeStringBuilder.append(index)
-                updatePinCodeText()
+                resetPinColor()
+                showPinCodeText()
             }
         }
 
         btnDelete.setOnClickListener {
             pinCodeStringBuilder.deleteLast()
-            updatePinCodeText()
+            resetPinColor()
+            showPinCodeText()
         }
 
         btnOk.setOnClickListener {
-            if (pinCodeStringBuilder.toString() == resources.getString(R.string.correct_pass)) {
+            if (isCorrectPin()) {
+                pinColor = getColor(R.color.button_primary)
                 Toast.makeText(
                     this,
                     resources.getString(R.string.success_toast),
                     Toast.LENGTH_SHORT).show()
+            } else {
+                pinColor = getColor(R.color.error_text)
             }
+            showPinCodeText()
         }
+    }
+
+    private fun resetPinColor() {
+        pinColor = getColor(R.color.hint_text)
+    }
+
+    private fun restoreFromSavedInstanceState(savedInstanceState: Bundle?) {
+        if (savedInstanceState != null) {
+            pinCodeStringBuilder.append(savedInstanceState.getString(PIN_KEY))
+            pinColor = savedInstanceState.getInt(PIN_COLOR_KEY)
+        }
+    }
+
+    private fun isCorrectPin(): Boolean {
+        return pinCodeStringBuilder.toString() == resources.getString(R.string.correct_pass)
     }
 }

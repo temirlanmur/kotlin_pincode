@@ -10,130 +10,126 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="300dp"
-
-        android:textAlignment="center"
-        android:textSize="22sp"
-        android:textColor="@color/hint_text"
+        android:layout_marginTop="245dp"
+        android:textColor="@color/text_hint"
         android:text="@string/hint_text" />
 
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/pin_code"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TableRowTheme">
+            style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/btn_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_1_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_2_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_3_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TableRowTheme">
+            style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/btn_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_4_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_5_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_6_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TableRowTheme">
+            style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/btn_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_7_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_8_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_9_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/TableRowTheme">
+            style="@style/TableRowStyle">
 
             <Button
                 android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_delete_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_0_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
 
             <Button
                 android:id="@+id/btn_ok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_ok_text"
-                style="@style/ButtonTheme" />
+                style="@style/PinButtonStyle" />
         </TableRow>
     </TableLayout>
 

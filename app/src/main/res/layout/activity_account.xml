@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/account_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/account_page_title" />
+
+    <Button
+        android:layout_width="16dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/selector_dots" />
+    
+    <ImageView
+        android:id="@+id/account_avatar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:layout_constraintTop_toBottomOf="@id/account_page_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/account_pic"
+        android:contentDescription="@string/account_avatar_alt_text" />
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/account_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/account_name"/>
+
+    <TextView
+        android:id="@+id/account_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/account_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/account_mail"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/account_mail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AccountButtonStyle"
+            android:text="@string/btn_share" />
+        <Button
+            android:id="@+id/btn_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AccountButtonStyle"
+            android:text="@string/btn_mail" />
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AccountButtonStyle"
+            android:text="@string/btn_call" />
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AccountButtonStyle"
+            android:text="@string/btn_camera" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_translate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="35dp"
+        android:background="@drawable/selector_translate"
+        style="@style/IconStyle" />
+
+    <Button
+        app:layout_constraintStart_toEndOf="@id/btn_translate"
+        app:layout_constraintEnd_toStartOf="@id/btn_exchange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/selector_favorite"
+        style="@style/IconStyle" />
+
+    <Button
+        android:id="@+id/btn_exchange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/selector_exchange"
+        style="@style/IconStyle" />
+
+    <Button
+        app:layout_constraintStart_toEndOf="@id/btn_exchange"
+        app:layout_constraintEnd_toStartOf="@id/btn_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/selector_search"
+        style="@style/IconStyle" />
+
+    <Button
+        android:id="@+id/btn_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/selector_account"
+        style="@style/IconStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

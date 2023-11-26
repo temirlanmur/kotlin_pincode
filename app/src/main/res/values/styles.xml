@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:width">81dp</item>
+        <item name="android:height">52dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="PinButtonStyle" parent="DefaultButtonStyle">
+        <item name="android:layout_marginHorizontal">10dp</item>
+    </style>
+
+    <style name="TableRowStyle">
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="AccountButtonStyle" parent="DefaultButtonStyle">
+        <item name="android:width">371dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="IconStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+</resources>

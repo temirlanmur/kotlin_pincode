@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.PinCodePage" parent="android:Theme.Material.Light.NoActionBar" />
-
-    <style name="ButtonTheme" parent="Widget.AppCompat.Button">
-        <item name="android:width">81dp</item>
-        <item name="android:height">52dp</item>
-        <item name="android:layout_marginHorizontal">10dp</item>
-        <item name="backgroundTint">@null</item>
-        <item name="android:background">@drawable/button_background</item>
-        <item name="android:textColor">@color/button_primary</item>
+    <style name="defaultTheme" parent="Theme.AppCompat.DayNight">
         <item name="android:textSize">22sp</item>
-    </style>
-
-    <style name="TableRowTheme">
-        <item name="android:layout_marginBottom">20dp</item>
     </style>
 </resources>

@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     private val PIN_KEY = "PIN_KEY"
     private val PIN_COLOR_KEY = "PIN_COLOR_KEY"
 
@@ -77,20 +77,20 @@ class MainActivity : ComponentActivity() {
 
         btnOk.setOnClickListener {
             if (isCorrectPin()) {
-                pinColor = getColor(R.color.button_primary)
+                pinColor = getColor(R.color.primary)
                 Toast.makeText(
                     this,
                     resources.getString(R.string.success_toast),
                     Toast.LENGTH_SHORT).show()
             } else {
-                pinColor = getColor(R.color.error_text)
+                pinColor = getColor(R.color.text_error)
             }
             showPinCodeText()
         }
     }
 
     private fun resetPinColor() {
-        pinColor = getColor(R.color.hint_text)
+        pinColor = getColor(R.color.text_hint)
     }
 
     private fun restoreFromSavedInstanceState(savedInstanceState: Bundle?) {
@@ -101,6 +101,6 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun isCorrectPin(): Boolean {
-        return pinCodeStringBuilder.toString() == resources.getString(R.string.correct_pass)
+        return pinCodeStringBuilder.toString() == PASSWORD
     }
 }

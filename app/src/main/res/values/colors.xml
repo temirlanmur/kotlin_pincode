@@ -5,4 +5,7 @@
     <color name="button_background">#F5F5F5</color>
     <color name="text_hint">#808080</color>
     <color name="text_error">#F91717</color>
+    <color name="button_background_pressed">#E17171</color>
+    <color name="button_color_pressed">#CCD9E2</color>
+    <color name="button_corner_pressed">#E80A0A</color>
 </resources>

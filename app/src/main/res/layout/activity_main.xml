@@ -131,7 +131,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_ok_text"
-                style="@style/PinButtonStyle" />
+                style="@style/PinButtonStyle"
+                android:background="@drawable/selector_bg_button_ok" />
         </TableRow>
     </TableLayout>
 

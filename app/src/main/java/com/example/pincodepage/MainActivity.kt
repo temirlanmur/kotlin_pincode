@@ -76,6 +76,13 @@ class MainActivity : AppCompatActivity() {
             showPinCodeText()
         }
 
+        btnDelete.setOnLongClickListener {
+            pinCodeStringBuilder.clear()
+            resetPinColor()
+            showPinCodeText()
+            true
+        }
+
         btnOk.setOnClickListener {
             if (isCorrectPin()) {
                 pinColor = getColor(R.color.primary)
